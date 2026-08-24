@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Catalogue</title>
+</head>
+<body>
+<h2>Welcome to Book Catalog</h2>
+
+<a href="/add">Add Book</a><br><br>
+<a href="/list">Book List</a><br><br>
+<a href="/update">Update Book</a><br><br>
+
+<h2>Book List</h2>
+
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+
+  <tr th:each="b : ${books}">
+    <td th:text="${b.id}"></td>
+    <td th:text="${b.name}"></td>
+    <td th:text="${b.author}"></td>
+    <td th:text="${b.description}"></td>
+    <td><a th:href="@{/update/{id}(id=${b.id})}">Update</a></td>
+  </tr>
+</table>
+
+</body>
+</html>

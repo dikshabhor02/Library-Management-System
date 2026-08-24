@@ -1,0 +1,62 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<form action="/update" method="post">-->
+
+<!--    <input type="hidden" name="id" th:value="${book.id}">-->
+
+<!--    Book Name:-->
+<!--    <input name="name" th:value="${book.name}"><br><br>-->
+
+<!--    Author:-->
+<!--    <input name="author" th:value="${book.author}"><br><br>-->
+
+<!--    Description:-->
+<!--    <input name="description" th:value="${book.description}"><br><br>-->
+
+<!--    <button>UPDATE BOOK</button>-->
+<!--</form>-->
+
+<!--<br>-->
+<!--<a href="/list">Back to Book List</a>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Book</title>
+</head>
+<body>
+
+<h2>Update Book</h2>
+
+<form action="/update" method="post">
+
+    Book ID:
+    <input type="text" name="id" th:value="${book?.id}"><br><br>
+
+    Title:
+    <input name="name" th:value="${book?.name}"><br><br>
+
+    Author:
+    <input name="author" th:value="${book?.author}"><br><br>
+
+    Description:
+    <input name="description" th:value="${book?.description}"><br><br>
+
+    <button>UPDATE BOOK</button>
+</form>
+
+<br>
+<a href="/list">Back to Book List</a>
+
+</body>
+</html>
